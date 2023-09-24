@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:padding="5dp"
     android:orientation="vertical"
     android:background="@drawable/fixbg"
     tools:context=".MainActivity">
@@ -200,9 +199,7 @@
                 android:background="@drawable/shape"
                 android:backgroundTint="#EDEDED"/>
         </LinearLayout>
-
     </LinearLayout>
-
     <Button
         android:id="@+id/button_pesan"
         android:layout_width="350dp"
