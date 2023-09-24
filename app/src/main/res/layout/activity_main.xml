@@ -1,132 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="5dp"
     android:orientation="vertical"
+    android:background="@drawable/fixbg"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/bg" />
 
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book Your Next Flight "
-        android:textSize="30sp"
-        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppin"
-        android:textColor="@color/white"
-        android:textStyle="bold"/>
+        android:text="Book Your Next Flight"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-
-    <TextView
-        android:id="@+id/input_nama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Masukkan Nama"
-        android:layout_below="@+id/txt_title"
-        android:layout_marginLeft="35dp"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/poppin"
-        android:textColor="@color/white"/>
-
-    <EditText
-        android:id="@+id/nama"
+    <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/poppin"
-        android:background="@drawable/shape"
-        android:backgroundTint="#EDEDED"
-        android:hint="Masukkan Nama"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/input_nama"/>
-
-    <TextView
-        android:id="@+id/pilih_tiket"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Jenis Tiket"
-        android:layout_below="@+id/nama"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="35dp"
-        android:textSize="15sp"
-        android:fontFamily="@font/poppin"
-        android:textColor="@color/white"/>
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Lengkap"
+                android:fontFamily="@font/poppin"/>
+            <EditText
+                android:id="@+id/nama"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppin"
+                android:background="@drawable/shape"
+                android:backgroundTint="#EDEDED"
+                android:textColor="@color/abu"
+                android:textSize="12sp"
+                android:hint="Masukkan Nama"/>
+        </LinearLayout>
+    </LinearLayout>
 
-    <Spinner
-        android:id="@+id/spin_jenis_tiket"
+    <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:background="@drawable/shape"
-        android:layout_below="@id/pilih_tiket"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="#EDEDED" />
-
-    <TextView
-        android:id="@+id/pilih_tgl"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Jadwal Keberangkatan"
-        android:layout_below="@+id/spin_jenis_tiket"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="35dp"
-        android:fontFamily="@font/poppin"
-        android:textSize="15sp"
-        android:textColor="@color/white"/>
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Tiket Pesawat"
+            android:fontFamily="@font/poppin"/>
+        <Spinner
+            android:id="@+id/spin_jenis_tiket"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/shape"
+            android:backgroundTint="#EDEDED"
+            />
+    </LinearLayout>
 
-    <DatePicker
-        android:id="@+id/date_pick"
+    <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="155dp"
-        android:datePickerMode="spinner"
-        android:background="@drawable/shape"
-        android:backgroundTint="#EDEDED"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/pilih_tgl"
-        android:calendarViewShown="false"/>
-
-    <TextView
-        android:id="@+id/pilih_waktu"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pilih Waktu Keberangkatan"
-        android:layout_below="@+id/date_pick"
-        android:layout_marginTop="5dp"
-        android:textSize="15sp"
-        android:layout_marginLeft="35dp"
-        android:fontFamily="@font/poppin"
-        android:textColor="@color/white"/>
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        >
 
-    <TimePicker
-        android:id="@+id/time_picker"
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="70dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Asal"
+                android:fontFamily="@font/poppin"/>
+
+            <RelativeLayout
+                android:layout_width="169dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape"
+                android:backgroundTint="#EDEDED">
+
+                <ImageView
+                    android:id="@+id/imgSpin1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/baseline_airplane_ticket_24"
+                    android:layout_alignParentStart="true"/>
+
+                <Spinner
+                    android:id="@+id/SpinText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="480dp"
+                    android:layout_toRightOf="@+id/imgSpin1"
+                    android:layout_toEndOf="@+id/imgSpin1"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="175dp"
+            android:layout_height="70dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tujuan"
+                android:fontFamily="@font/poppin"/>
+
+            <RelativeLayout
+                android:layout_width="169dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape"
+                android:backgroundTint="#EDEDED">
+
+                <ImageView
+                    android:id="@+id/imgSpin2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/baseline_connecting_airports_24"
+                    android:layout_alignParentStart="true"/>
+
+                <Spinner
+                    android:id="@+id/SpinText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/imgSpin2"
+                    android:layout_toEndOf="@+id/imgSpin2"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="155dp"
-        android:timePickerMode="spinner"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/shape"
-        android:backgroundTint="#EDEDED"
-        android:layout_below="@id/pilih_waktu"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppin"
+                android:text="Tanggal Keberangkatan"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"/>
+            <DatePicker
+                android:id="@+id/datePick"
+                android:layout_width="350dp"
+                android:layout_height="145dp"
+                android:calendarViewShown="false"
+                android:background="@drawable/shape"
+                android:backgroundTint="#EDEDED"
+                android:datePickerMode="spinner" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waktu Keberangkatan"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppin"/>
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:timePickerMode="spinner"
+                android:background="@drawable/shape"
+                android:backgroundTint="#EDEDED"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button_pesan"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:background="@drawable/buttonshape"
         android:text="Pesan Tiket"
         android:fontFamily="@font/poppin"
-        android:textSize="20sp"
-        android:layout_below="@id/time_picker"
+        android:textSize="15sp"
         android:layout_centerHorizontal="true"
         app:backgroundTint="#FFD60A"
         android:textColor="@color/black"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
 
-</RelativeLayout>
+
+
+
+
+

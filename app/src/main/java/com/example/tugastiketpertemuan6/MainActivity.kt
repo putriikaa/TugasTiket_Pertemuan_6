@@ -22,6 +22,26 @@ class MainActivity : AppCompatActivity() {
             "Economy Class"
         )
 
+        val asal = arrayOf(
+            "Yogyakarta",
+            "Bali",
+            "Jakarta",
+            "Surabaya",
+            "Bandung",
+            "Batam",
+            "Lombok"
+        )
+
+        val tujuan = arrayOf(
+            "Jakarta",
+            "Bandung",
+            "Surabaya",
+            "Singapore",
+            "Surakarta",
+            "Malaysia",
+            "Yogyakarta"
+        )
+
         with(binding){
             val jenistiketAdapter = ArrayAdapter(this@MainActivity,
                 androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,tiket)
@@ -30,6 +50,22 @@ class MainActivity : AppCompatActivity() {
                 androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)
 
             spinJenisTiket.adapter= jenistiketAdapter
+
+            val asalAdapter = ArrayAdapter(this@MainActivity,
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,asal)
+
+            asalAdapter.setDropDownViewResource(
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)
+
+            SpinText1.adapter= asalAdapter
+
+            val tujuanAdapter = ArrayAdapter(this@MainActivity,
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,tujuan)
+
+            tujuanAdapter.setDropDownViewResource(
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item)
+
+            SpinText2.adapter= tujuanAdapter
 
             var selectedDate = ""
             var selectedTime = ""

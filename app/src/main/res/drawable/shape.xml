@@ -5,7 +5,7 @@
         android:radius="10px"/>
     <stroke
         android:width="3dip"
-        android:color="#EDEDED"/>
+        android:color="#4495FA"/>
     <padding
         android:left="10dp"
         android:top="10dp"
