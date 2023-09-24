@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Your Next Flight "
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppin"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/input_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Nama"
+        android:layout_below="@+id/txt_title"
+        android:layout_marginLeft="35dp"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppin"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/poppin"
+        android:background="@drawable/shape"
+        android:backgroundTint="#EDEDED"
+        android:hint="Masukkan Nama"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/input_nama"/>
+
+    <TextView
+        android:id="@+id/pilih_tiket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Jenis Tiket"
+        android:layout_below="@+id/nama"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="35dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppin"
+        android:textColor="@color/white"/>
+
+    <Spinner
+        android:id="@+id/spin_jenis_tiket"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape"
+        android:layout_below="@id/pilih_tiket"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#EDEDED" />
+
+    <TextView
+        android:id="@+id/pilih_tgl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Jadwal Keberangkatan"
+        android:layout_below="@+id/spin_jenis_tiket"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="35dp"
+        android:fontFamily="@font/poppin"
+        android:textSize="15sp"
+        android:textColor="@color/white"/>
+
+    <DatePicker
+        android:id="@+id/date_pick"
+        android:layout_width="350dp"
+        android:layout_height="155dp"
+        android:datePickerMode="spinner"
+        android:background="@drawable/shape"
+        android:backgroundTint="#EDEDED"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/pilih_tgl"
+        android:calendarViewShown="false"/>
+
+    <TextView
+        android:id="@+id/pilih_waktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Waktu Keberangkatan"
+        android:layout_below="@+id/date_pick"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:layout_marginLeft="35dp"
+        android:fontFamily="@font/poppin"
+        android:textColor="@color/white"/>
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="350dp"
+        android:layout_height="155dp"
+        android:timePickerMode="spinner"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape"
+        android:backgroundTint="#EDEDED"
+        android:layout_below="@id/pilih_waktu"/>
+
+    <Button
+        android:id="@+id/button_pesan"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonshape"
+        android:text="Pesan Tiket"
+        android:fontFamily="@font/poppin"
+        android:textSize="20sp"
+        android:layout_below="@id/time_picker"
+        android:layout_centerHorizontal="true"
+        app:backgroundTint="#FFD60A"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>
